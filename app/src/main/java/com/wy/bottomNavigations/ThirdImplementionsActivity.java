@@ -1,23 +1,27 @@
 package com.wy.bottomNavigations;
 
 import android.os.Build;
-import android.support.v4.app.Fragment;
 import android.os.Bundle;
+import android.support.v4.app.Fragment;
 import android.support.v4.view.ViewPager;
 import android.support.v7.app.AppCompatActivity;
 import android.view.Window;
 import android.view.WindowManager;
+import android.widget.ImageView;
 import android.widget.RadioGroup;
+import android.widget.Toast;
 
 import com.wy.bottomNavigations.adpter.ManageAdapter;
 import com.wy.bottomNavigations.fragment.HomeTabFragment;
 import com.wy.bottomNavigations.fragment.OrderTabFragment;
 import com.wy.bottomNavigations.fragment.StatisticsTabFragment;
+import com.wy.bottomNavigations.widget.NoScrollViewPager;
 
 import java.util.ArrayList;
 
 import butterknife.BindView;
 import butterknife.ButterKnife;
+import butterknife.OnClick;
 
 /**
  * 第三种实现：使用RadioButton的底部导航栏
@@ -25,9 +29,11 @@ import butterknife.ButterKnife;
 public class ThirdImplementionsActivity extends AppCompatActivity {
 
     @BindView(R.id.manage_viewpager)
-    ViewPager viewpager;
+    NoScrollViewPager viewpager;
     @BindView(R.id.manage_radio_group)
     RadioGroup radioGroup;
+    @BindView(R.id.listen)
+    ImageView listen;
 
     private ArrayList<Fragment> fragments;
     private ManageAdapter manageAdapter;
@@ -120,6 +126,12 @@ public class ThirdImplementionsActivity extends AppCompatActivity {
 
             }
         });
+    }
+
+    @OnClick(R.id.listen)
+    public void onClick() {
+        Toast.makeText(getApplicationContext(), "点击了图片", Toast.LENGTH_SHORT).show();
+
     }
 }
 
