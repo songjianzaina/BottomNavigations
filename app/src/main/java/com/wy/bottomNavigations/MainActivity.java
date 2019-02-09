@@ -7,6 +7,8 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.LinearLayout;
 
+import com.wy.bottomNavigations.adaptablebottomnavigation.sample.AdaptableActivity;
+
 import butterknife.BindView;
 import butterknife.ButterKnife;
 import butterknife.OnClick;
@@ -19,6 +21,8 @@ public class MainActivity extends AppCompatActivity {
     Button btnSecond;
     @BindView(R.id.btn_third )
     Button btnThird;
+    @BindView(R.id.btn_fourth )
+    Button btnFourth;
     @BindView(R.id.activity_main)
     LinearLayout activityMain;
 
@@ -30,7 +34,7 @@ public class MainActivity extends AppCompatActivity {
 
     }
 
-    @OnClick({R.id.btn_first, R.id.btn_second,R.id.btn_third})
+    @OnClick({R.id.btn_first, R.id.btn_second,R.id.btn_third,R.id.btn_fourth})
     public void onViewClicked(View view) {
         switch (view.getId()) {
             case R.id.btn_first://用FragmentTabHost实现底部导航栏
@@ -41,6 +45,9 @@ public class MainActivity extends AppCompatActivity {
                 break;
             case R.id.btn_third://用RadioButton实现底部导航栏
                 startActivity(new Intent(getApplicationContext(), ThirdImplementionsActivity.class));
+                break;
+            case R.id.btn_fourth://adaptablebottomnavigation
+                startActivity(new Intent(getApplicationContext(), AdaptableActivity.class));
                 break;
         }
     }

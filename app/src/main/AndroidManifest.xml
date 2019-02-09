@@ -24,6 +24,9 @@
         <activity
             android:name="com.wy.bottomNavigations.ThirdImplementionsActivity"
             android:theme="@style/Theme.AppCompat.Light.NoActionBar" />
+        <activity
+            android:name=".adaptablebottomnavigation.sample.AdaptableActivity"
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar" />
     </application>
 
 </manifest>

@@ -23,4 +23,10 @@
         android:layout_width="match_parent"
         android:layout_height="60dp"
         android:text="用RadioButton实现底部导航栏" />
+
+    <Button
+        android:id="@+id/btn_fourth"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:text="design自适应版底部导航栏" />
 </LinearLayout>
